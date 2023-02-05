@@ -9,14 +9,22 @@ function sumar()
 	let numeroDos
 	let resultado
 
-	numeroUno = parseInt(document.getElementById("txtIdNumeroUno").value);
+	// hacerlo de la manera larga, ubicar el documento y luedo aplicar parseInt
 
-	numeroDos = parseInt(document.getElementById("txtIdNumeroDos").value);
+	numeroUno = document.getElementById("txtIdNumeroUno").value;
 
-	resultado = numeroDos + numeroUno
+	numeroDos = document.getElementById("txtIdNumeroDos").value;
+
+	numeroUno = parseInt(numeroUno);
+;
+	numeroDos = parseInt(numeroDos);
 
 
-	alert ("La suma es " + resultado )
+
+	resultado = numeroDos + numeroUno;
+
+
+	alert ("La suma es " + resultado );
 
 
 }
@@ -31,9 +39,9 @@ function restar()
 
 	numeroDos = parseInt(document.getElementById("txtIdNumeroDos").value);
 
-	resultado = numeroUno - numeroDos
+	resultado = numeroUno - numeroDos;
 
-	alert ("El resultado de la resta es " + resultado)
+	alert ("El resultado de la resta es " + resultado);
 	
 }
 
@@ -47,9 +55,9 @@ function multiplicar()
 
 	numeroDos = parseInt(document.getElementById("txtIdNumeroDos").value);
 
-	resultado = numeroUno * numeroDos
+	resultado = numeroUno * numeroDos;
 
-	alert ("El resultado de la multiplicación es " + resultado)
+	alert ("El resultado de la multiplicación es " + resultado);
 }
 
 function dividir()
@@ -62,9 +70,9 @@ function dividir()
 
 	numeroDos = parseInt(document.getElementById("txtIdNumeroDos").value);
 
-	resultado = numeroUno / numeroDos
+	resultado = numeroUno / numeroDos;
 
-	alert ("El resultado de la division es " + resultado)
+	alert ("El resultado de la division es " + resultado);
 	
 }
 

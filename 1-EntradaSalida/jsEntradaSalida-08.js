@@ -10,11 +10,16 @@ function SacarResto()
 	let resultado
 
 
-	numeroUno = parseInt(document.getElementById("txtIdNumeroDividendo").value);
+	numeroUno = document.getElementById("txtIdNumeroDividendo").value;
 
-	numeroDos = parseInt(document.getElementById("txtIdNumeroDivisor").value);
+	numeroDos = document.getElementById("txtIdNumeroDivisor").value;
 
-	resultado = numeroUno % numeroDos
+	numeroUno = parseInt(numeroUno);
+	
+	numeroDos = parseInt(numeroDos);
+
+
+	resultado = numeroUno % numeroDos;
 
 	alert ("El resto del dicidendo y el divisor es  " + resultado)
 	
