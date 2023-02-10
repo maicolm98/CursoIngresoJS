@@ -14,4 +14,3 @@ function mostrar()
 
 	
  }
-//video 02:15 if clase 4
