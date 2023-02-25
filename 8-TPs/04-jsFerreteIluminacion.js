@@ -26,27 +26,37 @@ function CalcularPrecio ()
     marca = document.getElementById("Marca").value;
 
     switch(cantidad){
-        case 1:
-        case 2:
-            descuento = 0;
-            break;
-        case 3:
-         breake;
-        case 4:
-            breake;
-        case 5:
-            if(marca == "ArgentinaLuz"){
-                descuento = 40;
+        case 1: if(cantidad <= 6){
+            descuento = 50;
+        }
+        break;
+        case 2: if(marca == "ArgentinaLuz" && cantidad == 5){
+            descuento = 40;
+        }
+        else{
+            descuento = 30;
+        } 
+        break;
 
+        case 3: if(marca == "ArgentinaLuz" || "FelipeLamparas"){
+            descuento = 25;
+        }
+            else{
+                descuento = 20;
+            }
+        break;
+
+        case 4:
+            if(marca == "ArgentinaLuz" && cantidad == 3){
+                descuento = 15;
+            }
+            else if(marca == "FelipeLamparas" && cantidad == 3){
+                descuento = 10;
             }
             else{
-                descuento = 30;
-
+                descuento = 5;
             }
-            breake;
-        default: 
-            descuento = 50;
-            breake;
+      
         
 
     }
