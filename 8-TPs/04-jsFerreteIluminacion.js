@@ -14,16 +14,29 @@ function CalcularPrecio ()
     let descuento;
     let PRECIO = 35;
     let marca;
-    let importeFinal;
-    let iibb;
-    let precioConDescuento;
-    
-    
-    CantidadLamparas = document.getElementById("txtIdCantidad").value;
+    let ImporteFinal;
+    let PrecioConDescuento;
+    let IIBB;
 
-    CantidadLamparas = parseInt (CantidadLamparas);
+
+    cantidad = document.getElementById("txtIdCantidad").value;
+
+    cantidad = parseInt (cantidad);
 
     marca = document.getElementById("Marca").value;
+
+    PrecioConDescuento = document.getElementById("txtIdprecioDescuento").value;
+
+    PrecioConDescuento = parseInt(PrecioConDescuento);
+
+    descuento = PRECIO / 100 * descuento;
+
+    ImporteFinal = PRECIO * cantidad;
+    
+     PrecioConDescuento = ImporteFinal - descuento;
+    
+     IIBB = PrecioConDescuento / 100 * 10 + PrecioConDescuento;
+
 
     switch(cantidad){
         case 1: if(cantidad <= 6){
@@ -38,7 +51,7 @@ function CalcularPrecio ()
         } 
         break;
 
-        case 3: if(marca == "ArgentinaLuz" || "FelipeLamparas"){
+        case 3: if(marca == "ArgentinaLuz" || marca == "FelipeLamparas" && cantidad == 4){
             descuento = 25;
         }
             else{
@@ -56,8 +69,26 @@ function CalcularPrecio ()
             else{
                 descuento = 5;
             }
-      
-        
+         break;
+    
+    if (ImporteFinal < 120 ){
+
+        PrecioConDescuento == IIBB ;
+
+        alert (" ”Usted pago  $" + PrecioConDescuento + "  de IIBB.")
 
     }
-}
+        else{
+        
+        alert ("Total: $" + ImporteFinal);
+
+
+        }
+
+
+    }
+         
+
+
+    }
+
